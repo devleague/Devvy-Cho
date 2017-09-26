@@ -86,7 +86,7 @@ const controller = ( rtm, channel, bot, waifuTarget ) => message => {
 
     replies.waifuTargetSpeaks(message);
 
-  }else if( message.text.indexOf(bot.mention) >= 0 ){
+  }else if( message.text && message.text.indexOf(bot.mention) >= 0 ){
 
     replies.mentioned(message);
 
