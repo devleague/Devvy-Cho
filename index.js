@@ -1,5 +1,5 @@
-const RtmClient = require('@slack/client').RtmClient;
 const {
+  RtmClient,
   CLIENT_EVENTS,
   RTM_EVENTS
 } = require('@slack/client');
