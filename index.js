@@ -26,7 +26,7 @@ rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, (rtmStartData) => {
   waifuTarget = rtmStartData.users.find(u => u.name === waifu_target_name);
   bot = rtmStartData.self;
   bot.mention = `<@${bot.id}>`;
-  console.log(`Logged in as ${rtmStartData.self.name} of team ${rtmStartData.team.name}, connected to channel ${channel.name}:${channel.id}`);
+  console.log(`Logged in as ${rtmStartData.self.name}, connected to channel ${channel.name}:${channel.id}`);
   // console.log(`Waifu Target ${JSON.stringify(waifuTarget)}`);
 });
 
