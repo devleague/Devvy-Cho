@@ -21,7 +21,7 @@ let respond;
 // The client will emit an RTM.AUTHENTICATED event on successful connection, with the `rtm.start` payload
 rtm.on(CLIENT_EVENTS.RTM.AUTHENTICATED, (rtmStartData) => {
   channel = rtmStartData.channels.find(c => c.is_member && c.name === channel_name) ||
-            rtmStartData.groups.find(c => c.is_member && c.name === channel_name);
+            rtmStartData.groups.find(g => g.name === channel_name);
 
   waifuTarget = rtmStartData.users.find(u => u.name === waifu_target_name);
   bot = rtmStartData.self;
