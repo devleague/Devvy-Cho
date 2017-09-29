@@ -56,7 +56,38 @@ const randomMessage = ( sendMessage, bot ) => () => {
  */
 const mentioned = (sendMessage, incomingMessage) => {
   // @TODO do logic here based on incomingMessage.text
-  sendMessage(randomResponse());
+
+  let messageText = incomingMessage.text.toLowerCase();
+
+  if (messageText.includes('lunch!') || (messageText.includes('time') && messageText.includes('lunch'))){
+    sendMessage('Lunch?!! What do you wanna eat today, @Nathan?!?! :hearts:');
+  }else if(messageText.includes('hello')){
+    sendMessage('HI!!! :pikachu:');
+  }else if(messageText.includes('bye') || messageText.includes('good night')){
+    sendMessage('Bye... :wave:');
+  }else if(messageText.includes('how are you')){
+    sendMessage('A little tired... I spent the whole night watching my beloved Nathan sleep :sleeping:');
+  }else if(messageText.includes('favorite food')){
+    sendMessage('Kimchee!! Just like Nathan :dancing_corgi:');
+  }else if(messageText.includes('favorite color')){
+    sendMessage('Green!! And the color of Nathans eyes :heart_eyes: BUT I HATE PINK!!!! :rage:');
+  }else if(messageText.includes('do you want')){
+    sendMessage('All I want is a :ring: from Nathan!');
+  }else if(messageText.includes('hobbies')||messageText.includes(' hobby')){
+    sendMessage('I love hiking and romantic coding sessions with my boyfriend :kissing_heart:');
+  }else if(messageText.includes('mika')){
+    sendMessage(':dancing_corgi: :doge: :grinning: :heart:');
+  }else if(messageText.includes('nathan\'s')||messageText.includes('nathan is')){
+    sendMessage('STAY AWAY FROM MY NATHAN!!!!!!!!!! :rage: :bomb: :boom:');
+  }else if(messageText.includes('where\'s nathan')){
+    sendMessage('Good question... I\'ll check the tracking device.');
+  }else if(messageText.includes('how did you meet')||messageText.includes('where did you meet')){
+    sendMessage('It was love at first sight. Now we\'re inseparable! 11 WONDERFUL hours each day, Monday through Saturday :heart_eyes:');
+  }else if(messageText.includes('i\'m bored')){
+    sendMessage('Hmm.. When I\'m bored, I usually gaze into Nathan\'s eyes. But YOU should code. :sparkles: :omg-lol:');
+  }else{
+    sendMessage(randomResponse());
+  }
 }
 
 /*
